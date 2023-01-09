@@ -1,0 +1,17 @@
+---
+const userId = parseInt(Astro.params.id);
+const users = [{id: 1, name: 'RandomUserName123'}, {id: 2, name: 'AnotherRandomUser33'}]
+
+function getUser(id) {
+  const user = users.find(user => user.id === id);
+  return user ? user.name : 'User not found';
+}
+---
+
+<html>
+  <body class="h-screen flex items-center justify-center">
+    <div class="flex items-center justify-center bg-slate-800 min-w-60 p-4 rounded-full shadow-slate-900 shadow-sm hover:bg-slate-900 transition-all">
+      <h1 class="text-3xl text-slate-200">{getUser(userId)}</h1>
+    </div>
+  </body>
+</html>

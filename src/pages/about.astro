@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="bg-slate-100">
+		<div class="container mx-auto">
+            <nav class="px-4 bg-slate-800 h-14 my-2 rounded-3xl flex items-center justify-between">
+                <a href="/" class="flex justify-center items-center gap-3">
+                    <img src="svg/waving-hand.svg" class="w-10" alt="">
+                    <div class="text-fuchsia-50 text-2xl">Hello Astro</div>
+                </a>
+                <ul class="flex items-center text-slate-100 gap-5 text-xl [&>*:hover]:text-slate-400">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                </ul>
+              </nav>
+			<div class="flex justify-center items-center flex-col text-gray-800">
+				<h1 class="text-3xl font-bold">About this page</h1>
+				
+			</div>
+		</div>
+	</body>
+</html>

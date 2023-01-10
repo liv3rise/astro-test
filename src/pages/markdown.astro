@@ -1,6 +1,7 @@
 ---
 export const prerender = true;
-const pageTitle = 'Blog page';
+import * as myPost from './posts/post-1.md';
+const pageTitle = 'Embedded markdown test';
 ---
 
 <html lang="en">
@@ -24,13 +25,10 @@ const pageTitle = 'Blog page';
                     <li><a href="/blog">Blog</a></li>
                 </ul>
               </nav>
-			<div class="flex justify-center items-center flex-col text-gray-800">
-				<h1 class="text-3xl font-bold mb-5">{pageTitle}</h1>
-                <ul class="list-disc [&>*:hover]:text-slate-500">
-                    <li><a href="/posts/post-1">Post 1</a></li>
-                    <li><a href="/posts/post-2">Post 2</a></li>
-                    <li><a href="/posts/post-3">Post 3</a></li>
-                </ul>
+			<div class="flex justify-center items-center flex-col text-gray-300 bg-slate-800 rounded-3xl p-5">
+				<div class="prose dark:prose-invert max-w-none">
+                    <myPost.Content />
+                </div>
 			</div>
 		</div>
 	</body>

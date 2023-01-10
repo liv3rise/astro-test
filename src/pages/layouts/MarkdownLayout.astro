@@ -1,18 +1,12 @@
----
-export const prerender = true;
-const pageTitle = 'Main page';
----
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-	<link rel="stylesheet" href="main.css">
-  </head>
-  <body>
+    <title>test</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#00f0ff" />
+</head>
+<body>
     <div class="container mx-auto">
 		<nav class="px-4 bg-slate-800 h-14 my-2 rounded-3xl flex items-center justify-between">
 			<a href="/" class="flex justify-center items-center gap-3">
@@ -26,9 +20,10 @@ const pageTitle = 'Main page';
 			</ul>
 		  </nav>
 		  <div class="flex justify-center items-center flex-col text-gray-800">
-			<h1 class="text-3xl font-bold">{pageTitle}</h1>
-			
+            <div class="prose">
+                <slot />
+            </div>
 		</div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,0 +1,7 @@
+---
+const { iconName, url, targetBlank } = Astro.props;
+---
+
+<a target={targetBlank && '_blank'} href={url} class="w-8 h-8 rounded-md bg-slate-900 flex justify-center items-center text-white text-xl hover:bg-neutral-900 transition-[background-color]">
+  <iconify-icon icon={iconName}></iconify-icon>
+</a>

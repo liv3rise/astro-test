@@ -1,6 +1,9 @@
 ---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 export const prerender = true;
-const pageTitle = 'Main page';
+const pageTitle = "Main page";
 ---
 
 <html lang="en">
@@ -10,25 +13,19 @@ const pageTitle = 'Main page';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-	<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
   </head>
-  <body>
+  <body class="p-5">
     <div class="container mx-auto">
-		<nav class="px-4 bg-slate-800 h-14 my-2 rounded-3xl flex items-center justify-between">
-			<a href="/" class="flex justify-center items-center gap-3">
-				<img src="svg/waving-hand.svg" class="w-10" alt="">
-				<div class="text-fuchsia-50 text-2xl">Hello Astro</div>
-			</a>
-			<ul class="flex items-center text-slate-100 gap-5 text-xl [&>*:hover]:text-slate-400">
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
-		  </nav>
-		  <div class="flex justify-center items-center flex-col text-gray-800">
-			<h1 class="text-3xl font-bold">{pageTitle}</h1>
-			
-		</div>
+      <Header />
+      <div class="flex justify-center items-center flex-col text-slate-100">
+        <h1 class="text-3xl font-bold mb-3">{pageTitle}</h1>
+        <h2 class="text-center text-slate-400">Yes, this is seriously the main page. What did you expect?</h2>
+      </div>
+      <Footer />
     </div>
+    <script
+      src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"
+    ></script>
   </body>
 </html>

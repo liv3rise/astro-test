@@ -1,0 +1,94 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+export const prerender = true;
+const pageTitle = "About this page";
+const exampleArr = [
+  "arr value 1",
+  "arr value 2",
+  "arr value 3",
+  "arr value 4",
+  "arr value 5",
+];
+const exampleObj = {
+  firstKey: "value 1",
+  secondKey: "value 2",
+  thirdKey: "value 3",
+  fourthKey: "value 4",
+  fifthKey: "value 5",
+};
+const exampleObjArr = [];
+Object.keys(exampleObj).forEach((key, index) =>
+  exampleObjArr.push(exampleObj[key])
+);
+
+let conditionalRender = true;
+
+const h2Color = "#E1E2E3";
+const fontWeight = 700;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="p-5">
+    <div class="container mx-auto">
+      <Header />
+      <div
+        class="flex justify-center items-center flex-col text-center"
+      >
+        <h1 class="text-3xl font-bold">{pageTitle}</h1>
+        <h2 class="text-md font-normal mb-10 w-72 text-slate-400">
+          everything that happens here may look strange, but don't mind, it's just my sandbox where I do nonsense and testing
+        </h2>
+        <h2 class="text-xl mb-4">rendered js array values with html</h2>
+        <ul class="list-disc mb-10 text-slate-400">
+          {exampleArr.map((key) => <li>{key}</li>)}
+        </ul>
+        <h2 class="text-xl mb-4">rendered js object values with html</h2>
+        <ul class="list-disc mb-10 text-slate-400">
+          {exampleObjArr.map((key) => <li>{key}</li>)}
+        </ul>
+        <h2 class="text-xl">conditional rendered elements</h2>
+        <h2 class="text-md mb-3"></h2>
+        <ul class="list-disc text-slate-400">
+          {
+            conditionalRender && (
+              <p class="mb-1">
+                this element will be visible if conditionalRender is true
+              </p>
+            )
+          }
+          {
+            conditionalRender ? (
+              <p class="mb-2 text-red-700">
+                this text will be red if conditionalRender is true
+              </p>
+            ) : (
+              <p class="mb-2 text-green-600">
+                or green if conditionalRender is false
+              </p>
+            )
+          }
+        </ul>
+      </div>
+      <Footer />
+    </div>
+    <script
+      src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"
+    ></script>
+  </body>
+</html>
+
+<style define:vars={{ h2Color, fontWeight }}>
+  h1, h2 {
+    color: var(--h2Color);
+    font-weight: var(--fontWeight);
+  }
+</style>

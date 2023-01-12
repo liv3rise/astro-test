@@ -1,35 +1,12 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-export const prerender = true;
+import MainLayout from "../layouts/MainLayout.astro";
 const pageTitle = "Blog page";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body class="p-5">
-    <div class="container mx-auto">
-      <Header />
-      <div class="flex justify-center items-center flex-col">
-        <h1 class="text-3xl font-bold mb-5 text-slate-100">{pageTitle}</h1>
-        <ul class="list-disc [&>*:hover]:text-slate-500 text-slate-400">
-          <li><a href="/posts/post-1">Post 1</a></li>
-          <li><a href="/posts/post-2">Post 2</a></li>
-          <li><a href="/posts/post-3">Post 3</a></li>
-        </ul>
-      </div>
-      <Footer />
-    </div>
-    <script
-      src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"
-      is:inline
-    ></script>
-  </body>
-</html>
+<MainLayout pageTitle={pageTitle}>
+  <ul class="list-disc [&>*:hover]:text-slate-500 text-slate-400">
+    <li><a href="/posts/post-1">Post 1</a></li>
+    <li><a href="/posts/post-2">Post 2</a></li>
+    <li><a href="/posts/post-3">Post 3</a></li>
+  </ul>
+</MainLayout>

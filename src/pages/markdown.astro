@@ -1,34 +1,11 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-export const prerender = true;
-import * as myPost from "./test.md";
+import MainLayout from "../layouts/MainLayout.astro";
+import * as testPost from "./test.md";
 const pageTitle = "Embedded markdown test";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body class="p-5">
-    <div class="container mx-auto">
-      <Header />
-      <div
-        class="flex justify-center items-center flex-col rounded-3xl p-5"
-      >
-	  <div class="prose dark:prose-invert break-words max-w-full">
-		<myPost.Content />
-	  </div>
-      </div>
-      <Footer />
-    </div>
-    <script
-      src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"
-    ></script>
-  </body>
-</html>
+<MainLayout>
+  <div class="prose dark:prose-invert break-words max-w-full">
+    <testPost.Content />
+  </div>
+</MainLayout>

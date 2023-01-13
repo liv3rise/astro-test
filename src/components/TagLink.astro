@@ -1,0 +1,14 @@
+---
+import Icon from "./Icon.astro";
+
+const {tag, url} = Astro.props;
+---
+
+<a href={url} class="flex w-[100%] md:w-[48.5%] p-4 border-slate-500 text-slate-500 border-2 rounded-md transition justify-between hover:border-slate-600 hover:text-slate-600">
+    <div class="flex flex-col justify-center">
+        <div class="text-[0.775rem] sm:text-sm lg:text-lg font-bold">Posts with tag <span class=" text-slate-200 p-1 bg-slate-600 rounded-md">{tag}</span></div>
+    </div>
+    <div class="pt-0.5">
+        <Icon iconName="material-symbols:arrow-right-alt-rounded" className="text-2xl" />
+    </div>
+</a>

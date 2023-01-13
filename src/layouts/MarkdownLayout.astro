@@ -1,29 +1,25 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>test</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="theme-color" content="#00f0ff" />
-</head>
-<body>
-    <div class="container mx-auto">
-		<nav class="px-4 bg-slate-800 h-14 my-2 rounded-3xl flex items-center justify-between">
-			<a href="/" class="flex justify-center items-center gap-3">
-				<img src="svg/waving-hand.svg" class="w-10" alt="">
-				<div class="text-fuchsia-50 text-2xl">Hello Astro</div>
-			</a>
-			<ul class="flex items-center text-slate-100 gap-5 text-xl [&>*:hover]:text-slate-400">
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/blog">Blog</a></li>
-			</ul>
-		  </nav>
-		  <div class="flex justify-center items-center flex-col text-gray-800">
-            <div class="prose">
-                <slot />
-            </div>
-		</div>
+---
+import MainLayout from "./MainLayout.astro";
+
+import Tag from "../components/Tag.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout>
+  <div class="prose dark:prose-invert break-words max-w-full">
+    <div class="flex gap-5 mb-10">
+      <div class="w-1 bg-slate-600"></div>
+      <div>
+        <h1 class="mb-2">{frontmatter.title}</h1>
+        <p class="m-0">Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+        <p class="m-0">Author: {frontmatter.author}</p>
+        <p class="mb-3 mt-0">{frontmatter.description}</p>
+        <div class="flex gap-2">
+          {frontmatter.tags.map((tag) => <Tag tag={tag} url={`${Astro.url.origin}/tags/${tag}`} />)}
+        </div>
+      </div>
     </div>
-</body>
-</html>
+    <slot />
+  </div>
+</MainLayout>

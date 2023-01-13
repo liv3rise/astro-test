@@ -1,0 +1,31 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import PostLink from "../../components/PostLink.astro";
+
+const {tag} = Astro.params;
+const allPosts = await Astro.glob('../posts/*.md');
+const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+
+const pageTitle = `All posts with tag`;
+
+
+// export async function getStaticPaths() {
+//     const allPosts = Astro.glob('../posts/*.md');
+
+//   return [
+//     { params: { tag: "astro" }, props: {posts: allPosts} },
+//     { params: { tag: "successes" }, props: {posts: allPosts} },
+//     { params: { tag: "community" }, props: {posts: allPosts} },
+//     { params: { tag: "blogging" }, props: {posts: allPosts} },
+//     { params: { tag: "setbacks" }, props: {posts: allPosts} },
+//     { params: { tag: "learning in public" }, props: {posts: allPosts} },
+//   ];
+// }
+
+---
+
+<MainLayout pageTitle={pageTitle} tag={tag}> 
+    <ul class="list-disc [&>*:hover]:text-slate-500 text-slate-400 flex flex-col sm:flex-row w-[74%] flex-wrap justify-between gap-y-5">
+        {filteredPosts.map((post) => <PostLink title={post.frontmatter.title} description={post.frontmatter.description} url={post.url} />)}
+      </ul>
+</MainLayout>

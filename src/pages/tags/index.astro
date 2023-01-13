@@ -1,0 +1,15 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import TagLink from "../../components/TagLink.astro";
+
+const allPosts = await Astro.glob('../posts/*.md');
+const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+
+const pageTitle = 'List of blog tags';
+---
+
+<MainLayout pageTitle={pageTitle}>
+    <div class="flex flex-wrap flex-col md:flex-row w-[100%] xl:w-[60%] items-center justify-between gap-y-4">
+        {uniqueTags.map((tag) => <TagLink tag={tag} url={`${Astro.url.origin}/tags/${tag}`}></TagLink>)}
+    </div>
+</MainLayout>

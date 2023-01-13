@@ -1,7 +1,7 @@
 ---
-title: 'My Third Blog Post'
+title: 'My Fourth Blog Post'
 pubDate: 2077-07-01
-description: 'This is the third testing post.'
+description: 'This is the fourth testing post.'
 author: 'liv3rise'
 image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 

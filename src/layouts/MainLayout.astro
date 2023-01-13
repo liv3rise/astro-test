@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const { pageTitle } = Astro.props;
+const { pageTitle, tag } = Astro.props;
 ---
 
 <html lang="en">
@@ -13,13 +13,13 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="/main.css" />
   </head>
   <body class="p-5">
     <div class="container mx-auto">
       <Header />
       <div class="flex justify-center items-center flex-col text-slate-100">
-        <h1 class="text-3xl font-bold mb-3 text-center">{pageTitle}</h1>
+        <h1 class="text-xl sm:text-3xl font-bold mb-8 text-center">{pageTitle} {tag && <br class="block sm:hidden" /> <span class="block mt-1 sm:inline sm:ml-1 py-1 px-2 bg-slate-600 text-slate-200 rounded-md">{tag}</span>}</h1>
         <slot />
       </div>
       <Footer />

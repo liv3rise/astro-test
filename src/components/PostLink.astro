@@ -1,0 +1,15 @@
+---
+import Icon from "./Icon.astro";
+
+const {title, description, url} = Astro.props;
+---
+
+<a href={url} class="flex w-[100%] sm:w-[48.5%] p-4 border-slate-500 border-2 rounded-md transition justify-between hover:border-slate-600">
+    <div class="flex flex-col">
+        <div class="text-lg md:text-xl font-bold mb-2">{title}</div>
+        <div class="text-md">{description}</div>
+    </div>
+    <div class="pt-0.5">
+        <Icon iconName="material-symbols:arrow-right-alt-rounded" className="text-2xl" />
+    </div>
+</a>

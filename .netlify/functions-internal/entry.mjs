@@ -1,6 +1,7 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { escape } from 'html-escaper';
-/* empty css                                *//* empty css                                  *//* empty css                                   */import 'mime';
+/* empty css                                *//* empty css                                  */import rss from '@astrojs/rss';
+/* empty css                                   */import 'mime';
 import 'cookie';
 import 'kleur/colors';
 import 'string-width';
@@ -1758,9 +1759,9 @@ var server_default = {
   renderToStaticMarkup
 };
 
-const $$Astro$f = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Navbar.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$g = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Navbar.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$g, $$props, $$slots);
   Astro2.self = $$Navbar;
   return renderTemplate`${maybeRenderHead($$result)}<nav class="rounded-3xl flex-col sm:flex-row sm:h-14 flex items-center justify-between">
   <a href="/" class="flex justify-center items-center gap-3 mb-3 sm:mb-0">
@@ -1770,24 +1771,25 @@ const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
   <ul class="flex items-center flex-wrap justify-center text-slate-100 gap-3 sm:gap-5 text-lg sm:text-xl [&>*:hover]:text-slate-400">
     <li><a href="/">Home</a></li>
     <li><a href="/blog">Blog</a></li>
+    <li><a href="/tags">Tags</a></li>
     <li><a href="/sandbox">Sandbox</a></li>
     <li><a href="/markdown">Markdown</a></li>
   </ul>
 </nav>`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Navbar.astro");
 
-const $$Astro$e = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Header.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$f = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Header.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$Header;
   return renderTemplate`${maybeRenderHead($$result)}<header class="mb-10">
     ${renderComponent($$result, "Navbar", $$Navbar, {})}
 </header>`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Header.astro");
 
-const $$Astro$d = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/SocialButton.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$e = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/SocialButton.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$SocialButton = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$SocialButton;
   const { iconName, url, targetBlank } = Astro2.props;
   return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(targetBlank && "_blank", "target")}${addAttribute(url, "href")} class="w-8 h-8 rounded-md bg-slate-900 flex justify-center items-center text-white text-xl hover:bg-neutral-900 transition-[background-color]">
@@ -1795,9 +1797,9 @@ const $$SocialButton = createComponent(async ($$result, $$props, $$slots) => {
 </a>`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/SocialButton.astro");
 
-const $$Astro$c = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Footer.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$d = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Footer.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$Footer;
   const userName = "liv3rise";
   const repoName = "astro-test";
@@ -1816,11 +1818,11 @@ const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
 </footer>`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Footer.astro");
 
-const $$Astro$b = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/layouts/MainLayout.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$c = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/layouts/MainLayout.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$MainLayout = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$MainLayout;
-  const { pageTitle } = Astro2.props;
+  const { pageTitle, tag } = Astro2.props;
   return renderTemplate`<html lang="en">
   <head>
     <meta charset="utf-8">
@@ -1834,7 +1836,7 @@ const $$MainLayout = createComponent(async ($$result, $$props, $$slots) => {
     <div class="container mx-auto">
       ${renderComponent($$result, "Header", $$Header, {})}
       <div class="flex justify-center items-center flex-col text-slate-100">
-        <h1 class="text-3xl font-bold mb-8 text-center">${pageTitle}</h1>
+        <h1 class="text-xl sm:text-3xl font-bold mb-8 text-center">${pageTitle} ${tag && renderTemplate`<br class="block sm:hidden"><span class="block mt-1 sm:inline sm:ml-1 py-1 px-2 bg-slate-600 text-slate-200 rounded-md">${tag}</span>`}</h1>
         ${renderSlot($$result, $$slots["default"])}
       </div>
       ${renderComponent($$result, "Footer", $$Footer, {})}
@@ -1844,10 +1846,10 @@ const $$MainLayout = createComponent(async ($$result, $$props, $$slots) => {
 </html>`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/layouts/MainLayout.astro");
 
-const $$Astro$a = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/index.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
-const $$Index = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
-  Astro2.self = $$Index;
+const $$Astro$b = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/index.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Index$1 = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
+  Astro2.self = $$Index$1;
   const pageTitle = "Main page";
   return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "pageTitle": pageTitle }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<h2 class="text-center text-slate-400">Yes, this is seriously the main page. What did you expect?</h2>` })}`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/index.astro");
@@ -1857,7 +1859,7 @@ const $$url$6 = "";
 
 const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: $$Index,
+  default: $$Index$1,
   file: $$file$6,
   url: $$url$6
 }, Symbol.toStringTag, { value: 'Module' }));
@@ -1907,7 +1909,7 @@ const html$5 = "<h1 id=\"one-morning-when-gregor-samsa-woke-from-troubled-dreams
 				}
 				Content$5[Symbol.for('astro.needsHeadRendering')] = true;
 
-const _page11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page12 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal: _internal$5,
   frontmatter: frontmatter$5,
@@ -1921,9 +1923,9 @@ const _page11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: Content$5
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$9 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/markdown.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$a = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/markdown.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Markdown = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$Markdown;
   return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, {}, { "default": () => renderTemplate`${maybeRenderHead($$result)}<div class="prose dark:prose-invert break-words max-w-full">
     ${renderComponent($$result, "testPost.Content", Content$5, {})}
@@ -1940,9 +1942,22 @@ const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url$5
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$8 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/sandbox.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const get = () => rss({
+  title: 'Hello Astro | Testing',
+  description: 'Just my sandbox where i test Astro',
+  site: 'https://testingastro.netlify.app/',
+  items: /* #__PURE__ */ Object.assign({"./posts/post-1.md": () => Promise.resolve().then(() => _page4),"./posts/post-2.md": () => Promise.resolve().then(() => _page5),"./posts/post-3.md": () => Promise.resolve().then(() => _page6),"./posts/post-4.md": () => Promise.resolve().then(() => _page7),"./posts/post-5.md": () => Promise.resolve().then(() => _page8)}),
+  customData: `<language>en-us</language>`,
+});
+
+const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  get
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$Astro$9 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/sandbox.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Sandbox = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$Sandbox;
   const pageTitle = "Sandbox page";
   const exampleArr = [
@@ -2005,24 +2020,24 @@ ${maybeRenderHead($$result)}
 const $$file$4 = "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/sandbox.astro";
 const $$url$4 = "/sandbox";
 
-const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: $$Sandbox,
   file: $$file$4,
   url: $$url$4
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$7 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Tag.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$8 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Tag.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Tag = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$Tag;
   const { tag, url } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(url, "href")} class="py-1 px-2 text-sm bg-slate-600 text-slate-200 rounded-md no-underline hover:bg-slate-700 transition">${tag}</a>`;
+  return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(url, "href")} class="py-1 px-2 text-sm bg-slate-600 text-slate-200 rounded-md no-underline hover:bg-slate-700 transition flex items-center justify-center">${tag}</a>`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Tag.astro");
 
-const $$Astro$6 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/layouts/MarkdownLayout.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$7 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/layouts/MarkdownLayout.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$MarkdownLayout = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$MarkdownLayout;
   const { frontmatter } = Astro2.props;
   return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, {}, { "default": () => renderTemplate`${maybeRenderHead($$result)}<div class="prose dark:prose-invert break-words max-w-full">
@@ -2097,7 +2112,7 @@ const html$4 = "<p>Welcome to my <em>new blog</em> about learning Astro! Here, I
 				}
 				Content$4[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal: _internal$4,
   frontmatter: frontmatter$4,
@@ -2166,7 +2181,7 @@ const html$3 = "<p>Welcome to my <em>new blog</em> about learning Astro! Here, I
 				}
 				Content$3[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal: _internal$3,
   frontmatter: frontmatter$3,
@@ -2235,7 +2250,7 @@ const html$2 = "<p>Welcome to my <em>new blog</em> about learning Astro! Here, I
 				}
 				Content$2[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal: _internal$2,
   frontmatter: frontmatter$2,
@@ -2304,7 +2319,7 @@ const html$1 = "<p>Welcome to my <em>new blog</em> about learning Astro! Here, I
 				}
 				Content$1[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal: _internal$1,
   frontmatter: frontmatter$1,
@@ -2373,7 +2388,7 @@ const html = "<h1 id=\"123\">123</h1>\n<h2 id=\"123-1\">123</h2>\n<h3 id=\"123-2
 				}
 				Content[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal,
   frontmatter,
@@ -2387,17 +2402,17 @@ const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: Content
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$5 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Icon.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$6 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Icon.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Icon = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$Icon;
   const { iconName, className } = Astro2.props;
   return renderTemplate`${renderComponent($$result, "iconify-icon", "iconify-icon", { "class": className, "icon": iconName })}`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/Icon.astro");
 
-const $$Astro$4 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/PostLink.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$5 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/PostLink.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$PostLink = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$PostLink;
   const { title, description, url } = Astro2.props;
   return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(url, "href")} class="flex w-[100%] sm:w-[48.5%] p-4 border-slate-500 border-2 rounded-md transition justify-between hover:border-slate-600">
@@ -2411,13 +2426,14 @@ const $$PostLink = createComponent(async ($$result, $$props, $$slots) => {
 </a>`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/PostLink.astro");
 
-const $$Astro$3 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/blog.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Astro$4 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/blog.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
 const $$Blog = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$Blog;
   const pageTitle = "Blog page";
-  const getPosts = await Astro2.glob(/* #__PURE__ */ Object.assign({"./posts/post-1.md": () => Promise.resolve().then(() => _page3),"./posts/post-2.md": () => Promise.resolve().then(() => _page4),"./posts/post-3.md": () => Promise.resolve().then(() => _page5),"./posts/post-4.md": () => Promise.resolve().then(() => _page6),"./posts/post-5.md": () => Promise.resolve().then(() => _page7)}), () => "./posts/*.md");
-  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "pageTitle": pageTitle }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<ul class="list-disc [&>*:hover]:text-slate-500 text-slate-400 flex flex-col sm:flex-row w-[74%] flex-wrap justify-between gap-y-5">
+  const getPosts = await Astro2.glob(/* #__PURE__ */ Object.assign({"./posts/post-1.md": () => Promise.resolve().then(() => _page4),"./posts/post-2.md": () => Promise.resolve().then(() => _page5),"./posts/post-3.md": () => Promise.resolve().then(() => _page6),"./posts/post-4.md": () => Promise.resolve().then(() => _page7),"./posts/post-5.md": () => Promise.resolve().then(() => _page8)}), () => "./posts/*.md");
+  const uniqueTags = [...new Set(getPosts.map((post) => post.frontmatter.tags).flat())];
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "pageTitle": pageTitle }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<div class="flex flex-wrap items-center justify-center gap-2 mb-7">${uniqueTags.map((tag) => renderTemplate`${renderComponent($$result, "Tag", $$Tag, { "tag": tag, "url": `${Astro2.url.origin}/tags/${tag}` })}`)}</div><ul class="list-disc [&>*:hover]:text-slate-500 text-slate-400 flex flex-col sm:flex-row w-[74%] flex-wrap justify-between gap-y-5">
     ${getPosts.map((post) => renderTemplate`${renderComponent($$result, "PostLink", $$PostLink, { "title": post.frontmatter.title, "description": post.frontmatter.description, "url": post.url })}`)}
   </ul>` })}`;
 }, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/blog.astro");
@@ -2425,53 +2441,69 @@ const $$Blog = createComponent(async ($$result, $$props, $$slots) => {
 const $$file$3 = "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/blog.astro";
 const $$url$3 = "/blog";
 
-const _page8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page9 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: $$Blog,
   file: $$file$3,
   url: $$url$3
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$2 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/[tag].astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
-const $$tag = createComponent(async ($$result, $$props, $$slots) => {
+const $$Astro$3 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/TagLink.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$TagLink = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
+  Astro2.self = $$TagLink;
+  const { tag, url } = Astro2.props;
+  return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(url, "href")} class="flex w-[100%] md:w-[48.5%] p-4 border-slate-500 text-slate-500 border-2 rounded-md transition justify-between hover:border-slate-600 hover:text-slate-600">
+    <div class="flex flex-col justify-center">
+        <div class="text-[0.775rem] sm:text-sm lg:text-lg font-bold">Posts with tag <span class=" text-slate-200 p-1 bg-slate-600 rounded-md">${tag}</span></div>
+    </div>
+    <div class="pt-0.5">
+        ${renderComponent($$result, "Icon", $$Icon, { "iconName": "material-symbols:arrow-right-alt-rounded", "className": "text-2xl" })}
+    </div>
+</a>`;
+}, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/components/TagLink.astro");
+
+const $$Astro$2 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/index.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
-  Astro2.self = $$tag;
-  const { tag } = Astro2.params;
-  const allPosts = await Astro2.glob(/* #__PURE__ */ Object.assign({"../posts/post-1.md": () => Promise.resolve().then(() => _page3),"../posts/post-2.md": () => Promise.resolve().then(() => _page4),"../posts/post-3.md": () => Promise.resolve().then(() => _page5),"../posts/post-4.md": () => Promise.resolve().then(() => _page6),"../posts/post-5.md": () => Promise.resolve().then(() => _page7)}), () => "../posts/*.md");
-  const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
-  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "pageTitle": `All posts with tag [ ${tag} ]` }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<ul class="list-disc [&>*:hover]:text-slate-500 text-slate-400 flex flex-col sm:flex-row w-[74%] flex-wrap justify-between gap-y-5">
-        ${filteredPosts.map((post) => renderTemplate`${renderComponent($$result, "PostLink", $$PostLink, { "title": post.frontmatter.title, "description": post.frontmatter.description, "url": post.url })}`)}
-      </ul>` })}`;
-}, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/[tag].astro");
+  Astro2.self = $$Index;
+  const allPosts = await Astro2.glob(/* #__PURE__ */ Object.assign({"../posts/post-1.md": () => Promise.resolve().then(() => _page4),"../posts/post-2.md": () => Promise.resolve().then(() => _page5),"../posts/post-3.md": () => Promise.resolve().then(() => _page6),"../posts/post-4.md": () => Promise.resolve().then(() => _page7),"../posts/post-5.md": () => Promise.resolve().then(() => _page8)}), () => "../posts/*.md");
+  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+  const pageTitle = "List of blog tags";
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "pageTitle": pageTitle }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<div class="flex flex-wrap flex-col md:flex-row w-[100%] xl:w-[60%] items-center justify-between gap-y-4">
+        ${uniqueTags.map((tag) => renderTemplate`${renderComponent($$result, "TagLink", $$TagLink, { "tag": tag, "url": `${Astro2.url.origin}/tags/${tag}` })}`)}
+    </div>` })}`;
+}, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/index.astro");
 
-const $$file$2 = "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/[tag].astro";
-const $$url$2 = "/tags/[tag]";
+const $$file$2 = "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/index.astro";
+const $$url$2 = "/tags";
 
-const _page9 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page10 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: $$tag,
+  default: $$Index,
   file: $$file$2,
   url: $$url$2
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$1 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags.astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
-const $$Tags = createComponent(async ($$result, $$props, $$slots) => {
+const $$Astro$1 = createAstro("C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/[tag].astro", "http://localhost:3000/", "file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/");
+const $$tag = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
-  Astro2.self = $$Tags;
-  return renderTemplate`<!--
+  Astro2.self = $$tag;
+  const { tag } = Astro2.params;
+  const allPosts = await Astro2.glob(/* #__PURE__ */ Object.assign({"../posts/post-1.md": () => Promise.resolve().then(() => _page4),"../posts/post-2.md": () => Promise.resolve().then(() => _page5),"../posts/post-3.md": () => Promise.resolve().then(() => _page6),"../posts/post-4.md": () => Promise.resolve().then(() => _page7),"../posts/post-5.md": () => Promise.resolve().then(() => _page8)}), () => "../posts/*.md");
+  const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+  const pageTitle = `All posts with tag`;
+  return renderTemplate`${renderComponent($$result, "MainLayout", $$MainLayout, { "pageTitle": pageTitle, "tag": tag }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<ul class="list-disc [&>*:hover]:text-slate-500 text-slate-400 flex flex-col sm:flex-row w-[74%] flex-wrap justify-between gap-y-5">
+        ${filteredPosts.map((post) => renderTemplate`${renderComponent($$result, "PostLink", $$PostLink, { "title": post.frontmatter.title, "description": post.frontmatter.description, "url": post.url })}`)}
+      </ul>` })}`;
+}, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/[tag].astro");
 
-TODO:
-Make a list of all available tags on this page
+const $$file$1 = "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags/[tag].astro";
+const $$url$1 = "/tags/[tag]";
 
--->`;
-}, "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags.astro");
-
-const $$file$1 = "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/tags.astro";
-const $$url$1 = "/tags";
-
-const _page10 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  default: $$Tags,
+  default: $$tag,
   file: $$file$1,
   url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
@@ -2498,14 +2530,14 @@ const $$id = createComponent(async ($$result, $$props, $$slots) => {
 const $$file = "C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/pages/api/user/[id].astro";
 const $$url = "/api/user/[id]";
 
-const _page12 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page13 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: $$id,
   file: $$file,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const pageMap = new Map([["src/pages/index.astro", _page0],["src/pages/markdown.astro", _page1],["src/pages/sandbox.astro", _page2],["src/pages/posts/post-1.md", _page3],["src/pages/posts/post-2.md", _page4],["src/pages/posts/post-3.md", _page5],["src/pages/posts/post-4.md", _page6],["src/pages/posts/post-5.md", _page7],["src/pages/blog.astro", _page8],["src/pages/tags/[tag].astro", _page9],["src/pages/tags.astro", _page10],["src/pages/test.md", _page11],["src/pages/api/user/[id].astro", _page12],]);
+const pageMap = new Map([["src/pages/index.astro", _page0],["src/pages/markdown.astro", _page1],["src/pages/rss.xml.js", _page2],["src/pages/sandbox.astro", _page3],["src/pages/posts/post-1.md", _page4],["src/pages/posts/post-2.md", _page5],["src/pages/posts/post-3.md", _page6],["src/pages/posts/post-4.md", _page7],["src/pages/posts/post-5.md", _page8],["src/pages/blog.astro", _page9],["src/pages/tags/index.astro", _page10],["src/pages/tags/[tag].astro", _page11],["src/pages/test.md", _page12],["src/pages/api/user/[id].astro", _page13],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
 if (typeof process !== "undefined") {
@@ -2582,7 +2614,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/markdown","type":"page","pattern":"^\\/markdown\\/?$","segments":[[{"content":"markdown","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/markdown.astro","pathname":"/markdown","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css","assets/sandbox.6b9eecf8.css"],"scripts":[{"type":"external","value":"hoisted.c5382807.js"}],"routeData":{"route":"/sandbox","type":"page","pattern":"^\\/sandbox\\/?$","segments":[[{"content":"sandbox","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/sandbox.astro","pathname":"/sandbox","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-1","type":"page","pattern":"^\\/posts\\/post-1\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-1","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-1.md","pathname":"/posts/post-1","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-2","type":"page","pattern":"^\\/posts\\/post-2\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-2","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-2.md","pathname":"/posts/post-2","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-3","type":"page","pattern":"^\\/posts\\/post-3\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-3","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-3.md","pathname":"/posts/post-3","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-4","type":"page","pattern":"^\\/posts\\/post-4\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-4","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-4.md","pathname":"/posts/post-4","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-5","type":"page","pattern":"^\\/posts\\/post-5\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-5","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-5.md","pathname":"/posts/post-5","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/blog","type":"page","pattern":"^\\/blog\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog.astro","pathname":"/blog","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/post-1.f82757c1.css","assets/_id_.815a3dc5.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/tags/[tag]","type":"page","pattern":"^\\/tags\\/([^/]+?)\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}],[{"content":"tag","dynamic":true,"spread":false}]],"params":["tag"],"component":"src/pages/tags/[tag].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css"],"scripts":[],"routeData":{"route":"/tags","type":"page","pattern":"^\\/tags\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/tags.astro","pathname":"/tags","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css"],"scripts":[],"routeData":{"route":"/test","type":"page","pattern":"^\\/test\\/?$","segments":[[{"content":"test","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/test.md","pathname":"/test","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.815a3dc5.css"],"scripts":[],"routeData":{"route":"/api/user/[id]","type":"page","pattern":"^\\/api\\/user\\/([^/]+?)\\/?$","segments":[[{"content":"api","dynamic":false,"spread":false}],[{"content":"user","dynamic":false,"spread":false}],[{"content":"id","dynamic":true,"spread":false}]],"params":["id"],"component":"src/pages/api/user/[id].astro","_meta":{"trailingSlash":"ignore"}}}],"site":"http://localhost:3000/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false,"isExperimentalContentCollections":false,"contentDir":"file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/content/"},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/astro/hoisted.js?q=0":"hoisted.c5382807.js","/astro/hoisted.js?q=1":"hoisted.421b1382.js","astro:scripts/before-hydration.js":""},"assets":["/assets/_id_.815a3dc5.css","/assets/post-1.f82757c1.css","/assets/sandbox.6b9eecf8.css","/favicon.svg","/hoisted.421b1382.js","/hoisted.c5382807.js","/main.css","/svg/waving-hand.svg"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/markdown","type":"page","pattern":"^\\/markdown\\/?$","segments":[[{"content":"markdown","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/markdown.astro","pathname":"/markdown","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/post-1.f82757c1.css","assets/_id_.eedbeeec.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/rss.xml","type":"endpoint","pattern":"^\\/rss\\.xml$","segments":[[{"content":"rss.xml","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/rss.xml.js","pathname":"/rss.xml","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css","assets/sandbox.6b9eecf8.css"],"scripts":[{"type":"external","value":"hoisted.c5382807.js"}],"routeData":{"route":"/sandbox","type":"page","pattern":"^\\/sandbox\\/?$","segments":[[{"content":"sandbox","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/sandbox.astro","pathname":"/sandbox","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-1","type":"page","pattern":"^\\/posts\\/post-1\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-1","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-1.md","pathname":"/posts/post-1","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-2","type":"page","pattern":"^\\/posts\\/post-2\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-2","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-2.md","pathname":"/posts/post-2","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-3","type":"page","pattern":"^\\/posts\\/post-3\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-3","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-3.md","pathname":"/posts/post-3","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-4","type":"page","pattern":"^\\/posts\\/post-4\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-4","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-4.md","pathname":"/posts/post-4","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/posts/post-5","type":"page","pattern":"^\\/posts\\/post-5\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"post-5","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/posts/post-5.md","pathname":"/posts/post-5","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css","assets/post-1.f82757c1.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/blog","type":"page","pattern":"^\\/blog\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog.astro","pathname":"/blog","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/post-1.f82757c1.css","assets/_id_.eedbeeec.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/tags","type":"page","pattern":"^\\/tags\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/tags/index.astro","pathname":"/tags","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/post-1.f82757c1.css","assets/_id_.eedbeeec.css"],"scripts":[{"type":"external","value":"hoisted.421b1382.js"}],"routeData":{"route":"/tags/[tag]","type":"page","pattern":"^\\/tags\\/([^/]+?)\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}],[{"content":"tag","dynamic":true,"spread":false}]],"params":["tag"],"component":"src/pages/tags/[tag].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css"],"scripts":[],"routeData":{"route":"/test","type":"page","pattern":"^\\/test\\/?$","segments":[[{"content":"test","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/test.md","pathname":"/test","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_id_.eedbeeec.css"],"scripts":[],"routeData":{"route":"/api/user/[id]","type":"page","pattern":"^\\/api\\/user\\/([^/]+?)\\/?$","segments":[[{"content":"api","dynamic":false,"spread":false}],[{"content":"user","dynamic":false,"spread":false}],[{"content":"id","dynamic":true,"spread":false}]],"params":["id"],"component":"src/pages/api/user/[id].astro","_meta":{"trailingSlash":"ignore"}}}],"site":"http://localhost:3000/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false,"isExperimentalContentCollections":false,"contentDir":"file:///C:/Users/swbn/Projects/01-web/04-testing-and-sandbox/astro-clean/src/content/"},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/astro/hoisted.js?q=0":"hoisted.c5382807.js","/astro/hoisted.js?q=1":"hoisted.421b1382.js","astro:scripts/before-hydration.js":""},"assets":["/assets/_id_.eedbeeec.css","/assets/post-1.f82757c1.css","/assets/sandbox.6b9eecf8.css","/favicon.svg","/hoisted.421b1382.js","/hoisted.c5382807.js","/main.css","/svg/waving-hand.svg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

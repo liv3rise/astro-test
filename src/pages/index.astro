@@ -1,10 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Greeting from "../components/Greeting";
+
 const pageTitle = "Main page";
 ---
 
+
 <MainLayout pageTitle={pageTitle}>
-  <h2 class="text-center text-slate-400">Yes, this is seriously the main page. What did you expect?</h2>
+  <Greeting messages={["Hello", "Hi", "Howdy", "Hey there", "Welcome"]} client:load />
+
+  <h2 class="text-center text-[13px] text-slate-400">Yes, this is seriously the main page. What did you expect?</h2>
 </MainLayout>
 
 

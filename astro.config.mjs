@@ -10,9 +10,12 @@ import netlify from "@astrojs/netlify/functions";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
+import preact from "@astrojs/preact";
+
+// https://astro.build/config
 export default defineConfig({
   site: "http://localhost:3000",
-  integrations: [tailwind(), mdx()],
+  integrations: [tailwind(), mdx(), preact()],
   output: "server",
   adapter: netlify()
 });

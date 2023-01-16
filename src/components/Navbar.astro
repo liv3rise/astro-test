@@ -1,17 +1,22 @@
+---
+import ThemeSwitch from "./ThemeSwitch.astro";
+---
+
+
 <nav
   class="rounded-3xl flex-col sm:flex-row sm:h-14 flex items-center justify-between"
 >
   <a href="/" class="flex justify-center items-center gap-3 mb-3 sm:mb-0">
     <img src="../svg/waving-hand.svg" class="w-6 sm:w-10" alt="" />
-    <div class="text-fuchsia-50 text-3xl font-bold">Hello Astro</div>
+    <div class="text-slate-700 dark:text-fuchsia-50 text-3xl font-bold">Hello Astro</div>
   </a>
   <ul
-    class="flex items-center flex-wrap justify-center text-slate-100 gap-3 sm:gap-5 text-lg sm:text-xl [&>*:hover]:text-slate-400"
+    class="flex items-center flex-wrap justify-center text-slate-700 dark:text-fuchsia-50 gap-3 sm:gap-5 text-lg sm:text-xl [&>*:hover]:text-slate-400"
   >
+    <li><ThemeSwitch></ThemeSwitch></li>
     <li><a href="/">Home</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/tags">Tags</a></li>
     <li><a href="/sandbox">Sandbox</a></li>
-    <li><a href="/markdown">Markdown</a></li>
   </ul>
 </nav>

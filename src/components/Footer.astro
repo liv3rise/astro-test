@@ -7,10 +7,10 @@ const repoUrl = `https://github.com/${userName}/${repoName}`;
 const userUrl = `https://github.com/${userName}`;
 ---
 
-<footer class="p-5 flex flex-col justify-center items-center rounded-3xl mt-4 text-center">
-    <div class="text-md text-white">Astro sandbox for testing different things.</div>
-    <div class="text-md text-white">You can find the source code for this mess <a class="underline text-slate-200 hover:text-slate-400 transition-[color]" href={repoUrl}>on my GitHub.</a></div>
-    <div class="text-sm text-slate-300 mb-5">But who cares ¯\_(ツ)_/¯</div>
+<footer class="p-5 flex flex-col justify-center items-center rounded-3xl mt-4 text-center text-slate-700 dark:text-fuchsia-50">
+    <div class="text-md ">Astro sandbox for testing different things.</div>
+    <div class="text-md ">You can find the source code for this mess <a class="underline hover:text-slate-500" href={repoUrl}>on my GitHub.</a></div>
+    <div class="text-sm  mb-5">But who cares ¯\_(ツ)_/¯</div>
 
     <div class="flex gap-1">
         <SocialButton iconName="mdi:github" url={userUrl} targetBlank={true} />

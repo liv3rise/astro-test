@@ -14,6 +14,8 @@ const { pageTitle, tag } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <link rel="stylesheet" href="/main.css" />
+
+    <script is:inline src="/theme-switch.js"></script>
   </head>
   <body class="p-5 bg-slate-50 dark:bg-slate-800">
     <div class="container mx-auto">
@@ -38,7 +40,6 @@ const { pageTitle, tag } = Astro.props;
       </div>
       <Footer />
     </div>
-    <script is:inline src="/theme-switch.js"></script>
     <script
       src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"
     ></script>

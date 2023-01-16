@@ -1,4 +1,12 @@
-localStorage.getItem('darkTheme') === 'true' ? switchTheme(true) : switchTheme(false);
+const storedThemeValue = localStorage.getItem('darkTheme');
+
+if (storedThemeValue === 'true') {
+  switchTheme(true);
+} else if (storedThemeValue === 'false') {
+  switchTheme(false);
+} else {
+  switchTheme(osColorScheme());
+}
 
 function switchTheme(darkTheme, toggler) {
   if (darkTheme) {
@@ -13,6 +21,10 @@ function switchTheme(darkTheme, toggler) {
 
 function isDark() {
   return document.documentElement.classList.contains("dark");
+}
+
+function osColorScheme() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
 function togglerClassHandler(toggler, isDark) {

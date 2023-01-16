@@ -6,8 +6,8 @@ const {title, description, url} = Astro.props;
 
 <a href={url} class="flex w-[100%] sm:w-[48.5%] p-4 border-slate-500 border-2 rounded-md transition justify-between hover:border-slate-600">
     <div class="flex flex-col">
-        <div class="text-lg md:text-xl font-bold mb-2">{title}</div>
-        <div class="text-md">{description}</div>
+        <div class="text-lg text-slate-700 dark:text-slate-300 md:text-xl font-bold mb-2">{title}</div>
+        <div class="text-md text-slate-600 dark:text-slate-400">{description}</div>
     </div>
     <div class="pt-0.5">
         <Icon iconName="material-symbols:arrow-right-alt-rounded" className="text-2xl" />

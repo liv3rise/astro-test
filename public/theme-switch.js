@@ -25,17 +25,7 @@ function togglerClassHandler(toggler, isDark) {
   }
 }
 
-window.onload = () => {
-  const themeToggler = document.getElementById("themeToggler");
-
-  togglerClassHandler(themeToggler, isDark());
-
-  themeToggler.addEventListener("click", (e) => {
-    switchTheme(!isDark(), themeToggler);
-  });
-}
-
-// document.addEventListener('DOMContentLoaded', () => {
+// themeToggler.onload = () => {
 //   const themeToggler = document.getElementById("themeToggler");
 
 //   togglerClassHandler(themeToggler, isDark());
@@ -43,4 +33,14 @@ window.onload = () => {
 //   themeToggler.addEventListener("click", (e) => {
 //     switchTheme(!isDark(), themeToggler);
 //   });
-// });
+// }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggler = document.getElementById("themeToggler");
+
+  togglerClassHandler(themeToggler, isDark());
+
+  themeToggler.addEventListener("click", (e) => {
+    switchTheme(!isDark(), themeToggler);
+  });
+});

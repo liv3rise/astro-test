@@ -2,11 +2,9 @@ localStorage.getItem('darkTheme') === 'true' ? switchTheme(true) : switchTheme(f
 
 function switchTheme(darkTheme, toggler) {
   if (darkTheme) {
-    console.log('switching to dark');
     document.documentElement.classList.add("dark");
     localStorage.setItem('darkTheme', darkTheme);
   } else {
-    console.log('switching to light');
     document.documentElement.classList.remove("dark");
     localStorage.setItem('darkTheme', darkTheme);
   }
@@ -25,16 +23,6 @@ function togglerClassHandler(toggler, isDark) {
   }
 }
 
-// themeToggler.onload = () => {
-//   const themeToggler = document.getElementById("themeToggler");
-
-//   togglerClassHandler(themeToggler, isDark());
-
-//   themeToggler.addEventListener("click", (e) => {
-//     switchTheme(!isDark(), themeToggler);
-//   });
-// }
-
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggler = document.getElementById("themeToggler");
 
@@ -42,5 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   themeToggler.addEventListener("click", (e) => {
     switchTheme(!isDark(), themeToggler);
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    switchTheme(e.matches, themeToggler);
   });
 });

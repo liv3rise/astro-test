@@ -1,0 +1,78 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const pageTitle = "GSAP testing";
+---
+
+<MainLayout pageTitle={pageTitle}>
+    <h2 class="mb-5 text-slate-500 text-2xl">Callbacks</h2>
+    <div class="flex flex-col gap-6 mb-5">
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test6-1"></div>
+
+        <div class="flex flex-col gap-3">
+            <div class="invisible" id="finished">animation finished!</div>
+            <button id="play-2" class="bg-slate-200 dark:bg-slate-700 p-2 rounded-md text-xl"
+                >Play</button
+            >
+        </div>
+    </div>
+
+    <h2 class="mb-5 text-slate-500 text-2xl">Timeline play, pause, etc</h2>
+    <div class="flex flex-col gap-6 mb-5">
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test5-1"></div>
+
+        <div class="flex gap-3">
+            <button id="play" class="bg-slate-200 dark:bg-slate-700 p-2 rounded-md text-xl"
+                >Play</button
+            >
+            <button id="pause" class="bg-slate-200 dark:bg-slate-700 p-2 rounded-md text-xl"
+                >Pause</button
+            >
+            <button id="speed" class="bg-slate-200 dark:bg-slate-700 p-2 rounded-md text-xl"
+                >Increase speed</button
+            >
+        </div>
+    </div>
+
+    <h2 class="mb-5 text-slate-500 text-2xl">Timeline</h2>
+    <div class="flex gap-6 mb-5">
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test4-1"></div>
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test4-2"></div>
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test4-3"></div>
+    </div>
+
+    <h2 class="mb-5 text-slate-500 text-2xl">Delay</h2>
+    <div class="flex gap-6 mb-5">
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test3-1"></div>
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test3-2"></div>
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test3-3"></div>
+    </div>
+
+    <h2 class="mb-5 text-slate-500 text-2xl">Stagger</h2>
+    <div class="flex gap-6 mb-5">
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test2"></div>
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test2"></div>
+        <div class="h-10 w-10 bg-slate-400 mb-3 gsap-test2"></div>
+    </div>
+
+    <h2 class="mb-5 text-slate-500 text-2xl">On click animation</h2>
+    <div class="flex flex-col items-center mb-5">
+        <div class="h-20 w-20 bg-slate-400 mb-3 gsap-test1"></div>
+        <div class="h-20 w-20 bg-slate-400 mb-3 gsap-test1"></div>
+        <div class="h-20 w-20 bg-slate-400 mb-3 gsap-test1"></div>
+    </div>
+
+    <h2 class="mb-5 text-slate-500 text-2xl" id="testTitle">ScrollTrigger</h2>
+    <div class="flex flex-col items-center mb-[200px] border-2 border-red-400">
+        <div class="h-20 w-20 bg-slate-400 mb-20 gsap-test7-1"></div>
+        <div class="h-20 w-20 bg-slate-400 mb-20 gsap-test7-2"></div>
+        <div class="h-20 w-20 bg-slate-400 mb-20 gsap-test7-3"></div>
+    </div>
+
+    <h2 class="mb-5 text-slate-500 text-2xl" id="testTitle">ScrollTrigger 2</h2>
+    <div class="flex flex-col items-center border-2 border-red-400">
+        <div id="testTrigger" class="h-[300px] w-[300px] bg-slate-400 gsap-test8-1"></div>
+    </div>
+</MainLayout>
+
+<script src="../scripts/gsap-test.js"></script>

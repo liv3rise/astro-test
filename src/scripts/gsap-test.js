@@ -8,11 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 let scrollTrigger = ScrollTrigger.create({
     trigger: '#testTrigger',
     start: 'bottom bottom',
+    toggleActions: "play pause resume pause",
+    // scrub: 1,
     // end: 'bottom top',
     // onEnter: self => self.trigger.style.backgroundColor = '#0f172a',
     // onToggle: self => console.log(self.isActive),
     animation: gsap.to('#testTrigger', {
-        scrub: true,
         borderRadius: '100%',
         scale: 0.5,
         duration: 2

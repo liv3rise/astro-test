@@ -1,5 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+import { Image, Picture } from '@astrojs/image/components';
+
 const pageTitle = "Sandbox page";
 const exampleArr = [
   "arr value 1",
@@ -69,8 +72,13 @@ const fontWeight = 700;
       class="p-2 bg-slate-600 text-slate-200 rounded-md text-md mb-2"
       >counter</button
     >
-    <div class="text-md text-slate-600 dark:text-slate-200">
+    <div class="text-md mb-10 text-slate-600 dark:text-slate-200">
       you clicked <span id="counterText">0</span> times
+    </div>
+
+    <h2 class="text-xl mb-4">@astrojs/image test</h2>
+    <div class="w-64 h-64 bg-slate-900 rounded-xl flex items-center justify-center">
+      <Image src="/astro.png" alt="test image" format="webp" width="100px" aspectRatio="16:9" />
     </div>
   </div>
 </MainLayout>

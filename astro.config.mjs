@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+// import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -13,9 +14,14 @@ import mdx from "@astrojs/mdx";
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
+import image from "@astrojs/image";
+
+// https://astro.build/config
 export default defineConfig({
   site: "http://localhost:3000",
-  integrations: [tailwind(), mdx(), preact()],
+  integrations: [tailwind(), mdx(), preact(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  })],
   output: "server",
   adapter: netlify()
 });
